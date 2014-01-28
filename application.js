@@ -67,4 +67,4 @@ var interval = setInterval(function () {
   if (!toApply.length) {
     clearInterval(interval);
   }
-}, 100);
+}, 50);
