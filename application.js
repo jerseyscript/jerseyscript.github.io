@@ -54,6 +54,7 @@ realStyle.innerHTML.split("\n").forEach(function (line) {
 
 var applyNext = function () {
   var app = toApply.shift();
+  app[1] = app[1].replace(/\-(\w)/, function(i,m) { return m.toUpperCase() });
   app[0].style[app[1]] = app[2];
 };
 
