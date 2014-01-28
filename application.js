@@ -4,7 +4,7 @@ realStyle.style.display = 'none';
 
 // Grab the data
 var toApply = [];
-realStyle.innerText.split("\n").forEach(function (line) {
+realStyle.innerHTML.split("\n").forEach(function (line) {
   var match = line.trim().match('(.+?){(.+?)}');
   if (match) {
 
