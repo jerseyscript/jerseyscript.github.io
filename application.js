@@ -52,10 +52,6 @@ realStyle.innerText.split("\n").forEach(function (line) {
   }
 });
 
-// Shuffle the styles like google does
-var o = toApply;
-for (var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-
 var applyNext = function () {
   var app = toApply.shift();
   app[0].style[app[1]] = app[2];
