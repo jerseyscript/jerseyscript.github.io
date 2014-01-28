@@ -2,10 +2,8 @@
 var realStyle = document.getElementsByTagName('jersey-style')[0];
 realStyle.style.display = 'none';
 
-// The things to do
-var toApply = [];
-
 // Grab the data
+var toApply = [];
 realStyle.innerHTML.split("\n").forEach(function (line) {
   var match = line.trim().match('(.+?){(.+?)}');
   if (match) {
@@ -44,7 +42,7 @@ realStyle.innerHTML.split("\n").forEach(function (line) {
         var elem;
         for (var i = 0; i < elems.length; i++) {
           elem = elems[i];
-          elem.style[pieces[0]] = pieces[1].trim();
+          toApply.push([elem, pieces[0], pieces[1].trim()]);
         }
 
       });
@@ -54,4 +52,15 @@ realStyle.innerHTML.split("\n").forEach(function (line) {
   }
 });
 
-console.log(toApply);
+var applyNext = function () {
+  var app = toApply.shift();
+  app[0].style[app[1]] = app[2];
+};
+
+// And apply it
+var interval = setInterval(function () {
+  applyNext();
+  if (!toApply.length) {
+    clearInterval(interval);
+  }
+}, 10);
