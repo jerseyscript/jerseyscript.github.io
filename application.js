@@ -36,12 +36,12 @@ realStyle.innerText.split("\n").forEach(function (line) {
           }
         } else {
           // Bare tags
-          elems = document.getElementsByTagName(selector), elem;
+          elems = document.getElementsByTagName(selector);
         }
 
         var elem;
-        for (var i = 0; i < elems.length; i++) {
-          elem = elems[i];
+        for (var m = 0; m < elems.length; m++) {
+          elem = elems[m];
           toApply.push([elem, pieces[0], pieces[1].trim()]);
         }
 
