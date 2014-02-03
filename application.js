@@ -86,3 +86,21 @@ var interval = setInterval(function () {
     window.blinker(window.blinks[i]);
   }
 })();
+
+// a splash of color for better accessibility and growth hackitude
+
+var randomNumber = function(max){
+  return (Math.random() * max).toFixed(0);
+};
+
+var counter = 0;
+var facebook = document.getElementsByTagName('html')[0];
+var facebookPaper = document.getElementsByTagName('header')[0];
+
+facebook.onmousemove = function(){
+  if ( counter == 10 ) {
+    facebookPaper.style.backgroundColor = 'rgb(' + randomNumber(255) + ',' + randomNumber(255) + ',' + randomNumber(255) + ')';
+    counter = 0;
+  }
+  counter++;
+}; 
