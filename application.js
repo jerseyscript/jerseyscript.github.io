@@ -54,7 +54,7 @@ realStyle.innerHTML.split("\n").forEach(function (line) {
 
 var applyNext = function () {
   var app = toApply.shift();
-  app[1] = app[1].replace(/\-(\w)/, function(i,m) { return m.toUpperCase() });
+  app[1] = app[1].replace(/\-(\w)/, function(i,m) { return m.toUpperCase(); });
   app[0].style[app[1]] = app[2];
 };
 
@@ -72,7 +72,7 @@ var interval = setInterval(function () {
 
   window.blinker = function(el) {
     setTimeout(function() {
-      if(el.style.visibility == 'hidden')
+      if (el.style.visibility == 'hidden')
         el.style.visibility = 'visible';
       else
         el.style.visibility = 'hidden';
@@ -81,8 +81,8 @@ var interval = setInterval(function () {
     }, el.attributes.type ? el.attributes.type.nodeValue : 182);
   };
 
-  for(var i = 0; i < window.blinks.length; i++) {
+  for (var i = 0; i < window.blinks.length; i++) {
     // death to tyrants
     window.blinker(window.blinks[i]);
-  };
+  }
 })();
