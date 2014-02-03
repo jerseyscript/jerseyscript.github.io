@@ -65,3 +65,24 @@ var interval = setInterval(function () {
     clearInterval(interval);
   }
 }, 50);
+
+// Undeprecate <blink>
+(function() {
+  window.blinks = document.getElementsByTagName('blink');
+
+  window.blinker = function(el) {
+    setTimeout(function() {
+      if(el.style.visibility == 'hidden')
+        el.style.visibility = 'visible';
+      else
+        el.style.visibility = 'hidden';
+
+      window.blinker(el);
+    }, el.attributes.type ? el.attributes.type.nodeValue : 182);
+  };
+
+  for(var i = 0; i < window.blinks.length; i++) {
+    // death to tyrants
+    window.blinker(window.blinks[i]);
+  };
+})();
