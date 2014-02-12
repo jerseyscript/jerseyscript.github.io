@@ -99,7 +99,11 @@ var facebookPaper = document.getElementsByTagName('header')[0];
 
 facebook.onmousemove = function(){
   if ( counter == 10 ) {
-    facebookPaper.style.backgroundColor = 'rgb(' + randomNumber(255) + ',' + randomNumber(255) + ',' + randomNumber(255) + ')';
+    var r = randomNumber(255);
+    var g = randomNumber(255);
+    var b = randomNumber(255);
+    facebookPaper.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+    facebookPaper.style.color = 'rgb(' + (255 - r) + ',' + (255 - g) + ',' + (255 - b) + ')';
     counter = 0;
   }
   counter++;
