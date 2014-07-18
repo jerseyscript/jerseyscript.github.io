@@ -97,7 +97,7 @@ var counter = 0;
 var facebook = document.getElementsByTagName('html')[0];
 var facebookPaper = document.getElementsByTagName('header')[0];
 
-facebook.onmousemove = function(){
+/*facebook.onmousemove = function(){
   if ( counter == 10 ) {
     var r = randomNumber(255);
     var g = randomNumber(255);
@@ -107,4 +107,4 @@ facebook.onmousemove = function(){
     counter = 0;
   }
   counter++;
-}; 
+}; */
