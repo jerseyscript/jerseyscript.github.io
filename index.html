@@ -5,7 +5,7 @@
 	<meta charset="utf-8" />
   <jersey-style>
 		body { background: dodgerblue url('welcome.jpg'); background-size: 100%; font-family: monospace; font-size: 1.3em; }
-		a { color: white; }
+		a { color: #ffffff; animation-name: subtle; animation-duration: 94608000s;}
 		h1, h2 { margin: .2em 0; }
 		h1 { font-family: monospace; font-size: 3em; }
 		#container { background: rgba(255,255,255,.5); width: 100%; max-width: 800px; padding: 10px; margin: 30px auto; }
@@ -39,5 +39,8 @@
 		</footer>
 	</div>
   <script src="application.js"></script>
+	<style>
+		@keyframes subtle { from { color: #ffffff; } to { color: #000000; } }
+	</style>
 </body>
 </html>
