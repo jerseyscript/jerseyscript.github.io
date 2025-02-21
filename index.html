@@ -8,14 +8,21 @@
 		a { color: #ffffff; animation-name: subtle; animation-duration: 94608000s;}
 		h1, h2 { margin: .2em 0; }
 		h1 { font-family: monospace; font-size: 3em; }
-		#container { background: rgba(255,255,255,.5); width: 100%; max-width: 800px; padding: 10px; margin: 30px auto; }
+		#container { position: relative; background: rgba(255,255,255,.5); width: 100%; max-width: 800px; padding: 10px; margin: 50px auto; }
 		header, section, footer { background: #2173A9; padding: 10px; margin: 10px; text-align: center; }
 		footer p { margin: 0; font-size: .8em; font-style: italic;}
 		section { background: #B73453; }
+		aside { display: flex; justify-content: center; align-items: center; background-color: orange; text-align: center; rotate: 30deg; font-size: 22px; height: 250px; width: 250px; position: absolute; top: -60px; right: -110px; aspect-ratio: 1; clip-path: polygon(100% 50%,78.98% 57.76%,93.3% 75%,71.21% 71.21%,75% 93.3%,57.76% 78.98%,50% 100%,42.24% 78.98%,25% 93.3%,28.79% 71.21%,6.7% 75%,21.02% 57.76%,0% 50%,21.02% 42.24%,6.7% 25%,28.79% 28.79%,25% 6.7%,42.24% 21.02%,50% 0%,57.76% 21.02%,75% 6.7%,71.21% 28.79%,93.3% 25%,78.98% 42.24%);}
+		span { width: 80px; }
   </jersey-style>
 </head>
 <body>
 	<div id="container">
+		<aside>
+			<span>
+				Now with more Jersey!
+			</span>
+		</aside>
 		<header>
 			<h1>JerseyScript</h1>
 			~*the real web devs of new jersey*~ <br />(and anyone who happens to be in the area and wants to hang out)
